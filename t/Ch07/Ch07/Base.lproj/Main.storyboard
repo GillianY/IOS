@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-lw-Zfh">
+                                <rect key="frame" x="20" y="35" width="560" height="29"/>
+                                <segments>
+                                    <segment title="照片"/>
+                                    <segment title="拍照"/>
+                                </segments>
+                                <connections>
+                                    <action selector="photoChooserHandler:" destination="BYZ-38-t0r" eventType="valueChanged" id="BPv-QS-b6D"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-pX-iry">
+                                <rect key="frame" x="133" y="116" width="335" height="368"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="QoN-RQ-aKx"/>
+                                    <constraint firstAttribute="height" constant="368" id="WUx-Ke-G2w"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H1c-pX-iry" firstAttribute="top" secondItem="4gt-lw-Zfh" secondAttribute="bottom" constant="53" id="Bfs-8F-Tv2"/>
+                            <constraint firstItem="H1c-pX-iry" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="brP-E1-gvK"/>
+                            <constraint firstItem="4gt-lw-Zfh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dy8-YB-iCJ"/>
+                            <constraint firstItem="4gt-lw-Zfh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="qfK-Zw-3S2"/>
+                            <constraint firstItem="4gt-lw-Zfh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wmL-un-7O2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="H1c-pX-iry" id="64a-eE-v93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="374"/>
+        </scene>
+    </scenes>
+</document>

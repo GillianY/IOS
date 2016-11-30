@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="imagePickerControl" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kfr-J3-BmN">
+                                <rect key="frame" x="0.0" y="522" width="600" height="29"/>
+                                <segments>
+                                    <segment title="照片"/>
+                                    <segment title="拍照"/>
+                                </segments>
+                                <connections>
+                                    <action selector="photoselectedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="l7N-4q-E2H"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="photoimg" translatesAutoresizingMaskIntoConstraints="NO" id="Ao5-uu-d2X">
+                                <rect key="frame" x="54" y="-18" width="520" height="527"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ao5-uu-d2X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-25" id="1bC-zZ-AK2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kfr-J3-BmN" secondAttribute="bottom" constant="50" id="DJ3-nP-Jx9"/>
+                            <constraint firstItem="kfr-J3-BmN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lvf-Qx-WOQ"/>
+                            <constraint firstItem="Ao5-uu-d2X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fCQ-Lc-16N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="Ao5-uu-d2X" id="EhE-bx-hvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="362"/>
+        </scene>
+        <!--Img Picker View Controller-->
+        <scene sceneID="RXy-uT-pca">
+            <objects>
+                <viewController id="QjS-NX-ZGN" customClass="imgPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a1p-Tt-GnZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3zn-8r-hUh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A7J-z9-vel">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJp-1T-zhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="362"/>
+        </scene>
+    </scenes>
+</document>
