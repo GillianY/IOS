@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9H8-4Z-kz0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8W-kB-EHA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -41,7 +41,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="5DL-bL-A7J">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="70"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5DL-bL-A7J" id="ZAo-4x-rZ4">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="69"/>
@@ -67,7 +67,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="iKr-Uf-XcW" kind="show" id="Joo-1P-YIz"/>
+                                            <segue destination="MhC-gb-xDz" kind="show" id="1La-yC-Wo7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -81,13 +81,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eUt-lJ-y3I" secondAttribute="trailing" id="ha1-3Y-GcU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oej-bf-O6b"/>
                     <connections>
                         <outlet property="funcTableView" destination="eUt-lJ-y3I" id="P13-Pa-lmE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGx-yR-gb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="72"/>
+            <point key="canvasLocation" x="934" y="72"/>
         </scene>
         <!--Main Diary View Controller-->
         <scene sceneID="1Ej-Jw-n8n">
@@ -126,28 +127,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Z6Y-ck-IgG">
+                    <navigationItem key="navigationItem" id="gEj-Vq-FQN">
                         <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="BNh-yw-BxG">
-                            <rect key="frame" x="166" y="6" width="268" height="33"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5Qx-cH-9rP">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tP-lI-7q3">
-                                    <rect key="frame" x="19" y="6" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l2c-vl-XCl">
-                                    <rect key="frame" x="97" y="3" width="121" height="29"/>
-                                    <segments>
-                                        <segment title="First"/>
-                                        <segment title="Second"/>
-                                    </segments>
-                                </segmentedControl>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FmA-OY-pHx" id="wIS-H5-ol3"/>
@@ -155,25 +144,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfi-xa-V0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="72"/>
+            <point key="canvasLocation" x="1648" y="72"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="xWO-Kq-413">
+        <scene sceneID="eke-wm-Qit">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iKr-Uf-XcW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q8W-kB-EHA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WJT-DL-TUv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Jr-UE-gfk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MhC-gb-xDz" kind="relationship" relationship="rootViewController" id="tkr-aQ-VY0"/>
+                        <segue destination="9H8-4Z-kz0" kind="relationship" relationship="rootViewController" id="nxG-hp-rBs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nJj-3S-OQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7q-LD-ZBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="72"/>
+            <point key="canvasLocation" x="122" y="72"/>
         </scene>
     </scenes>
     <resources>

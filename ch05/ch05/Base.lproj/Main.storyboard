@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iphoneWheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-g1-LSP">
+                                <rect key="frame" x="70" y="97" width="461" height="437"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="437" id="N2Y-cM-AlF"/>
+                                    <constraint firstAttribute="width" constant="450" id="mBP-8m-Cb4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lkx-g1-LSP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DOi-P8-8Ia"/>
+                            <constraint firstItem="Lkx-g1-LSP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w2W-1A-i6q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="holderImg" destination="Lkx-g1-LSP" id="rVO-pu-xvW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphoneWheel.png" width="345" height="340"/>
+    </resources>
+</document>
