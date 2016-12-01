@@ -8,29 +8,60 @@
 
 import UIKit
 
-class MainDiaryViewController: UIViewController,UITableViewDataSource{ //UIViewController
+class MainDiaryViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{ //UIViewController
     
 
     var countriesinEurope = ["11/1","11/2","11/4"]
     var countriesinAsia = ["10/30","10/7","10/14"]
     var countriesInSouthAmerica = ["9/9","9/12","9/18"]
+    //var cellData = [(String , UIImage)]()
+    
+    var diarylist : [diaryItem]?
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
+       
+        let nib = UINib(nibName: "diaryTableViewCell", bundle: nil);
+        tableView.registerNib(nib, forHeaderFooterViewReuseIdentifier: "diaryentryCell")
+        diarylist =  [diaryItem]();
+        getDiarylist();
+        print("---------getDiarylist")
         super.viewDidLoad()
-        
+        print("---------viewDidLoad")
         setBackgroundTheme("");
-        
         self.tableView.dataSource = self as UITableViewDataSource
         
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+       // list  = ContactDAO.getContacts()
+        print("---------viewWillAppear")
+        self.tableView.reloadData()
+    }
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getDiarylist()->(){
+       // diarylist = [diaryItem]();
+        
+        var adiaryitem = diaryItem();
+        diarylist?.append(adiaryitem);
+        
+        adiaryitem = diaryItem();
+        adiaryitem.date = diaryItem.stringToDate("Wed, 12 Oct 2016 04:35");
+        diarylist?.append(adiaryitem);
+        
+        adiaryitem = diaryItem();
+        adiaryitem.date = diaryItem.stringToDate("Sun, 30 Oct 2016 01:05");
+        diarylist?.append(adiaryitem);
+       // print("count \(diarylist!.count)------");
+    
     }
     
     
@@ -50,27 +81,42 @@ class MainDiaryViewController: UIViewController,UITableViewDataSource{ //UIViewC
         return 3
     }
     
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MianDiaryCell", forIndexPath: indexPath) as! UITableViewCell
-       
-        // 3
-        // Configure the cell...
-        switch (indexPath.section) {
-        case 0:
-            cell.textLabel?.text = countriesinEurope[indexPath.row]
-        case 1:
-            cell.textLabel?.text = countriesinAsia[indexPath.row]
-        case 2:
-            cell.textLabel?.text = countriesInSouthAmerica[indexPath.row]
-        //return sectionHeaderView
-        default:
-            cell.textLabel?.text = "Other"
-        }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{ // as! diaryTableViewCell
+        
+        print("---------tableView cellForRowAtIndexPath");
+       // switch (indexPath.section) {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("diaryentryCell", forIndexPath: indexPath) as! diaryTableViewCell
+        
+      //  var aitem: diaryItem  = diarylist![indexPath.row];
+    //  cell.day.text = diaryItem.dategetDay(aitem.date!) ;
+    //  cell.weekday.text = diaryItem.dategetWeek( aitem.date!);
+        cell.dairytitle.text = "testtest";// aitem.title ;
         
         return cell
     }
 
+    
+    
+    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("diaryentryCell", forIndexPath: indexPath) as! UITableViewCell
+//       
+//        // Configure the cell...
+//        switch (indexPath.section) {
+//        case 0:
+//            cell.textLabel?.text = countriesinEurope[indexPath.row]
+//        case 1:
+//            cell.textLabel?.text = countriesinAsia[indexPath.row]
+//        case 2:
+//            cell.textLabel?.text = countriesInSouthAmerica[indexPath.row]
+//        //return sectionHeaderView
+//        default:
+//            cell.textLabel?.text = "Other"
+//        }
+//        return cell
+//    }
+//
     func tableView(tableView:UITableView, titleForHeaderInSection: Int)-> String?
     {
         if titleForHeaderInSection == 0 {

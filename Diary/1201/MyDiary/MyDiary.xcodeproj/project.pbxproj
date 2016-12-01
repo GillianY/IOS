@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70AF0D31DF02706005B1E67 /* diaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AF0D11DF02706005B1E67 /* diaryTableViewCell.swift */; };
+		C70AF0D41DF02706005B1E67 /* diaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70AF0D21DF02706005B1E67 /* diaryTableViewCell.xib */; };
+		C70AF0D61DF02F8B005B1E67 /* diaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AF0D51DF02F8B005B1E67 /* diaryItem.swift */; };
 		C767F0691DEED49000175D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767F0681DEED49000175D64 /* AppDelegate.swift */; };
 		C767F06B1DEED49000175D64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767F06A1DEED49000175D64 /* ViewController.swift */; };
 		C767F06E1DEED49000175D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C767F06C1DEED49000175D64 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70AF0D11DF02706005B1E67 /* diaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diaryTableViewCell.swift; sourceTree = "<group>"; };
+		C70AF0D21DF02706005B1E67 /* diaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = diaryTableViewCell.xib; sourceTree = "<group>"; };
+		C70AF0D51DF02F8B005B1E67 /* diaryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diaryItem.swift; sourceTree = "<group>"; };
 		C767F0651DEED49000175D64 /* MyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C767F0681DEED49000175D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C767F06A1DEED49000175D64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70AF0D71DF03FA8005B1E67 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		C767F05C1DEED49000175D64 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +81,7 @@
 		C767F0671DEED49000175D64 /* MyDiary */ = {
 			isa = PBXGroup;
 			children = (
+				C70AF0D71DF03FA8005B1E67 /* UI */,
 				C767F0821DEEF22900175D64 /* photo */,
 				C767F0811DEEF20B00175D64 /* controller */,
 				C767F0801DEEF20100175D64 /* model */,
@@ -83,6 +97,9 @@
 		C767F0801DEEF20100175D64 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C70AF0D11DF02706005B1E67 /* diaryTableViewCell.swift */,
+				C70AF0D21DF02706005B1E67 /* diaryTableViewCell.xib */,
+				C70AF0D51DF02F8B005B1E67 /* diaryItem.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -170,6 +187,7 @@
 				C767F07F1DEEF15600175D64 /* sky2.png in Resources */,
 				C767F0861DEEF48C00175D64 /* gift.png in Resources */,
 				C767F0731DEED49000175D64 /* LaunchScreen.storyboard in Resources */,
+				C70AF0D41DF02706005B1E67 /* diaryTableViewCell.xib in Resources */,
 				C767F08A1DEEF4BE00175D64 /* snowman.png in Resources */,
 				C767F0701DEED49000175D64 /* Assets.xcassets in Resources */,
 				C767F06E1DEED49000175D64 /* Main.storyboard in Resources */,
@@ -184,7 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70AF0D61DF02F8B005B1E67 /* diaryItem.swift in Sources */,
 				C767F06B1DEED49000175D64 /* ViewController.swift in Sources */,
+				C70AF0D31DF02706005B1E67 /* diaryTableViewCell.swift in Sources */,
 				C767F0841DEEF26B00175D64 /* MainMenuViewController.swift in Sources */,
 				C767F07B1DEED57400175D64 /* MainDiaryViewController.swift in Sources */,
 				C767F0691DEED49000175D64 /* AppDelegate.swift in Sources */,
@@ -338,6 +358,7 @@
 				C767F0791DEED49000175D64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
