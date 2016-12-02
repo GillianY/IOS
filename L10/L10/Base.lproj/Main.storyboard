@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="L10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-ym-bcN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="502351947.38502401">
+                                    <!--2016-12-02 06:12:27 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sTJ-B9-KhA">
+                                <rect key="frame" x="0.0" y="224" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-cd-UVb">
+                                <rect key="frame" x="0.0" y="270" width="600" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btncomfirmHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hzc-q0-wGo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sTJ-B9-KhA" secondAttribute="trailing" id="9yh-IY-nUy"/>
+                            <constraint firstItem="P8h-cd-UVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOU-OI-Yqk"/>
+                            <constraint firstItem="P8h-cd-UVb" firstAttribute="top" secondItem="sTJ-B9-KhA" secondAttribute="bottom" constant="10" id="Dmx-Zq-b7O"/>
+                            <constraint firstItem="sTJ-B9-KhA" firstAttribute="top" secondItem="lC1-ym-bcN" secondAttribute="bottom" constant="10" id="e4q-2z-5kX"/>
+                            <constraint firstItem="lC1-ym-bcN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="el8-DJ-JaE"/>
+                            <constraint firstItem="sTJ-B9-KhA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t07-5p-CJG"/>
+                            <constraint firstItem="sTJ-B9-KhA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ykZ-UO-Nxh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timePicker" destination="lC1-ym-bcN" id="2Me-7t-qp0"/>
+                        <outlet property="txtMsg" destination="sTJ-B9-KhA" id="cLk-Z7-geq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="368"/>
+        </scene>
+    </scenes>
+</document>
