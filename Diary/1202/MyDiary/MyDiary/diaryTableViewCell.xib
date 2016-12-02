@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="diaryTableViewCell" customModule="MyDiary" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="diaryCell" rowHeight="130" id="KGk-i7-Jjw" customClass="diaryTableViewCell" customModule="MyDiary" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="440" height="133"/>
@@ -16,15 +16,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fO9-78-cZa">
-                        <rect key="frame" x="0.0" y="1" width="470" height="115"/>
+                        <rect key="frame" x="0.0" y="85" width="440" height="115"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fid-DP-X72">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fid-DP-X72">
                                 <rect key="frame" x="8" y="85" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkr-4q-4EO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkr-4q-4EO">
                                 <rect key="frame" x="8" y="8" width="92" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <color key="textColor" red="0.092391897210000004" green="0.1225745377" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,29 +49,48 @@
                                     <action selector="toPhotos:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qmH-DN-icP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="deer.png" translatesAutoresizingMaskIntoConstraints="NO" id="gKR-9e-GpJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="deer.png" translatesAutoresizingMaskIntoConstraints="NO" id="gKR-9e-GpJ">
                                 <rect key="frame" x="379" y="17" width="44" height="34"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gift.png" translatesAutoresizingMaskIntoConstraints="NO" id="LUo-yO-631">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="gift.png" translatesAutoresizingMaskIntoConstraints="NO" id="LUo-yO-631">
                                 <rect key="frame" x="334" y="17" width="44" height="34"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snowman.png" highlightedImage="snowman.png" translatesAutoresizingMaskIntoConstraints="NO" id="9fZ-SM-QxV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="snowman.png" highlightedImage="snowman.png" translatesAutoresizingMaskIntoConstraints="NO" id="9fZ-SM-QxV">
                                 <rect key="frame" x="291" y="17" width="44" height="34"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kkr-4q-4EO" firstAttribute="leading" secondItem="fO9-78-cZa" secondAttribute="leading" constant="8" id="Gv3-Yu-UV0"/>
+                            <constraint firstItem="gKR-9e-GpJ" firstAttribute="leading" secondItem="LUo-yO-631" secondAttribute="trailing" constant="6" id="TKS-xn-VFr"/>
+                            <constraint firstItem="gKR-9e-GpJ" firstAttribute="leading" secondItem="9fZ-SM-QxV" secondAttribute="trailing" constant="4" id="egg-X8-rRn"/>
+                            <constraint firstItem="Fid-DP-X72" firstAttribute="leading" secondItem="fO9-78-cZa" secondAttribute="leading" constant="8" id="hmr-Wa-H90"/>
+                            <constraint firstAttribute="trailing" secondItem="gKR-9e-GpJ" secondAttribute="trailing" constant="20" id="x94-fK-zkw"/>
+                        </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umh-XF-Tun">
+                        <rect key="frame" x="199" y="56" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" red="0.092391897210000004" green="0.1225745377" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fO9-78-cZa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="29Q-qw-H9I"/>
                     <constraint firstItem="fO9-78-cZa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Dx8-zv-1Az"/>
+                    <constraint firstItem="fO9-78-cZa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="K3z-B6-RL3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fO9-78-cZa" secondAttribute="trailing" id="Nae-UJ-LE3"/>
+                    <constraint firstItem="umh-XF-Tun" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Nhw-0f-0Le"/>
                     <constraint firstItem="fO9-78-cZa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Nqt-gp-YOy"/>
+                    <constraint firstItem="umh-XF-Tun" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="48" id="R4W-74-VHy"/>
+                    <constraint firstItem="fO9-78-cZa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hRe-t5-6Ug"/>
                     <constraint firstAttribute="trailingMargin" secondItem="fO9-78-cZa" secondAttribute="trailing" constant="-8" id="iFf-ih-mPW"/>
+                    <constraint firstItem="fO9-78-cZa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="jeS-vg-4da"/>
                     <constraint firstItem="fO9-78-cZa" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="5" id="nAt-Bh-iMd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fO9-78-cZa" secondAttribute="bottom" id="tzF-1g-U9N"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="Day" destination="kkr-4q-4EO" id="CqC-bb-jor"/>
                 <outlet property="dairytitle" destination="TeN-Z5-Gt6" id="cob-Zq-yrB"/>
                 <outlet property="day" destination="kkr-4q-4EO" id="9GI-oQ-WhD"/>
                 <outlet property="moodIcon" destination="LUo-yO-631" id="pnq-oA-WY2"/>
@@ -80,7 +99,7 @@
                 <outlet property="weatherIcon" destination="9fZ-SM-QxV" id="4mX-hb-ps4"/>
                 <outlet property="weekday" destination="Fid-DP-X72" id="PPx-eG-FwC"/>
             </connections>
-            <point key="canvasLocation" x="523" y="300.5"/>
+            <point key="canvasLocation" x="747" y="265.5"/>
         </tableViewCell>
     </objects>
     <resources>
