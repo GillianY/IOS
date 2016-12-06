@@ -24,8 +24,17 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1480496963_bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="dEy-pe-4RH">
                                         <rect key="frame" x="32" y="15" width="74" height="68"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMk-iH-Ste">
+                                        <rect key="frame" x="252" y="53" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KMk-iH-Ste" firstAttribute="centerX" secondItem="erZ-sB-tMM" secondAttribute="centerX" id="xnz-gS-8M7"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfx-5I-7nn">
                                 <rect key="frame" x="20" y="128" width="580" height="409"/>
@@ -44,7 +53,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NxQ-pf-3NQ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="1480497004_star.png" translatesAutoresizingMaskIntoConstraints="NO" id="NxQ-pf-3NQ">
                                                     <rect key="frame" x="116" y="4" width="38" height="35"/>
                                                 </imageView>
                                             </subviews>
@@ -160,5 +169,6 @@
     </scenes>
     <resources>
         <image name="1480496963_bird.png" width="128" height="128"/>
+        <image name="1480497004_star.png" width="128" height="128"/>
     </resources>
 </document>

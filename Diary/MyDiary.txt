@@ -1,0 +1,40 @@
+share data via wifi
+
+
+https://github.com/theappguruz/iOS--File-Sharing-Using-WiFi-Demo-Project
+
+https://github.com/mayfourth/WiFi-Direct-File-Transfer
+
+https://github.com/theappguruz/iOS--File-Sharing-Using-WiFi-Demo-Project
+
+
+
+http://stackoverflow.com/questions/15401154/exporting-files-over-wifi-to-a-computer-from-an-iphone-app
+
+
+
+scroll view :
+
+http://www.appcoda.com.tw/uiscrollview-introduction/
+https://developer.apple.com/reference/uikit/uiscrollview
+
+
+取代掉一般打板師 （ 3D）
+英文能力  畫畫 （wireframe 畫sketch ） 以及前端網頁 （前後端網頁）
+
+itil 建構 更改套用流程 （實際效益 降低服務台進線）
+http://sidneyho.pixnet.net/blog/post/12305823-itil%E8%AA%8D%E8%AD%89%E8%80%83%E8%A9%A6%E5%88%B6%E5%BA%A6%E4%BB%8B%E7%B4%B9
+
+IOS  自動換鍵盤格式  keyboard type
+輸入時把要填地往上提 , 離開時要往下格進入 （減少使用者輸入或著次操作減少越好）
+
+這是標準 （IOS規定很多）  沒有查過之前不要說好
+
+日期 
+calendar 
+
+
+alwaysBounceVertical ＝ NO 
+_scrollView.showsHorizontalScrollIndicator=YES;  //可以水平滑动
+
+熟悉 精通再利用
