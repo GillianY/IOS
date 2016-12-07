@@ -38,3 +38,18 @@ alwaysBounceVertical ＝ NO
 _scrollView.showsHorizontalScrollIndicator=YES;  //可以水平滑动
 
 熟悉 精通再利用
+
+＝＝＝＝
+http://www.wenku8.com/novel/2/2102/index.htm
+
+jqueryMobile :
+https://ezoapp.gitbooks.io/ezoapp-tutorials/content/chapter12/index.html
+
+====視差
+
+IOS: 
+
+Accesosureindicator  > click any space in the item 
+detailDisclosure > —> button event (not good , avoid delete)
+
+＝＝＝＝＝

@@ -47,7 +47,7 @@ class MainMenuViewController: UIViewController ,UITableViewDataSource{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-        print("hi!!")
+        //print("hi!!")
         // 3
         // Configure the cell...
         switch (indexPath.section) {

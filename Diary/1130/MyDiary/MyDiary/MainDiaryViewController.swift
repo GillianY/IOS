@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainDiaryViewController: UIViewController,UITableViewDataSource{ //UIViewController
+class MainDiaryViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{ //UIViewController
     
 
     var countriesinEurope = ["11/1","11/2","11/4"]
@@ -23,8 +23,14 @@ class MainDiaryViewController: UIViewController,UITableViewDataSource{ //UIViewC
         
         setBackgroundTheme("");
         
-        self.tableView.dataSource = self as UITableViewDataSource
+        self.tableView.dataSource = self  ;//as UITableViewDataSource
         
+        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(200, 10)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "I'am a test label"
+        
+        self.navigationController?.navigationBar.addSubview(label);
         // Do any additional setup after loading the view.
     }
 

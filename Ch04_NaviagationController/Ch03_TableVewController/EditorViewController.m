@@ -52,6 +52,9 @@
     [super viewDidLoad];
     self.taskInput.delegate =self;
     
+    
+    
+    
     if(self.row == -1){
         self.title =@"New";
     }else{
