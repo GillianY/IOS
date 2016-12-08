@@ -30,7 +30,9 @@ class MainDiaryViewController: UIViewController,UITableViewDataSource, UITableVi
         print("---------getDiarylist")
         super.viewDidLoad()
         print("---------viewDidLoad")
+        
         setBackgroundTheme("");
+        self.tableView.delegate = self;
         self.tableView.dataSource = self as UITableViewDataSource
         
         // Do any additional setup after loading the view.
