@@ -18,7 +18,7 @@ class mainDiaryViewController: UIViewController, UITableViewDataSource,UITableVi
     var diarylist : [diaryItem]?
     
     @IBOutlet weak var naviBar: UINavigationItem!
-    @IBOutlet weak var uptoolbar: UIToolbar!
+   // @IBOutlet weak var uptoolbar: UIToolbar!
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -27,8 +27,8 @@ class mainDiaryViewController: UIViewController, UITableViewDataSource,UITableVi
                                          forBarMetrics: .Default)
         navigationBar.shadowImage = UIImage()
         
-        uptoolbar.layer.borderWidth = 1;
-        uptoolbar.layer.borderColor =  UIColor.clearColor().CGColor;
+     //   uptoolbar.layer.borderWidth = 1;
+     //   uptoolbar.layer.borderColor =  UIColor.clearColor().CGColor;
         
         // navigationController?.navigationBar.frame.origin.y = 10
         setBackgroundTheme("");

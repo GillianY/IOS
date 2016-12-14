@@ -186,15 +186,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" sectionIndexMinimumDisplayRowCount="-1" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="2" translatesAutoresizingMaskIntoConstraints="NO" id="UeT-be-mMq">
-                                <rect key="frame" x="0.0" y="118" width="560" height="416"/>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" sectionIndexMinimumDisplayRowCount="-1" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UeT-be-mMq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="diaryCell" rowHeight="44" id="xmo-1c-91O" customClass="mainDiaryCell" customModule="MyDiary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114" width="560" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="top" tableViewCell="xmo-1c-91O" id="zfm-vh-Gcl">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-VZ-lLY">
@@ -267,25 +267,14 @@
                                     <outlet property="delegate" destination="ccI-ff-xw8" id="mvU-kA-0rD"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urD-j7-5eh">
-                                <rect key="frame" x="0.0" y="64" width="560" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pXO-8E-Hdk"/>
-                                    <barButtonItem title="Entries" id="zZm-KB-X84"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ygM-0Q-gBb"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="UeT-be-mMq" secondAttribute="trailing" id="6WE-sj-Prp"/>
-                            <constraint firstItem="urD-j7-5eh" firstAttribute="top" secondItem="dVa-1U-3b5" secondAttribute="bottom" id="Sxz-lf-va9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="urD-j7-5eh" secondAttribute="trailing" id="kFm-WK-IhR"/>
-                            <constraint firstItem="lhg-Bh-X2g" firstAttribute="top" secondItem="UeT-be-mMq" secondAttribute="bottom" id="lOz-ld-enb"/>
-                            <constraint firstItem="urD-j7-5eh" firstAttribute="leading" secondItem="27j-EH-3OV" secondAttribute="leadingMargin" id="snk-px-UAk"/>
-                            <constraint firstItem="UeT-be-mMq" firstAttribute="top" secondItem="urD-j7-5eh" secondAttribute="bottom" id="tkk-7s-NX7"/>
-                            <constraint firstItem="UeT-be-mMq" firstAttribute="centerX" secondItem="27j-EH-3OV" secondAttribute="centerX" id="xvv-bn-WVo"/>
-                            <constraint firstItem="UeT-be-mMq" firstAttribute="leading" secondItem="27j-EH-3OV" secondAttribute="leadingMargin" id="ybg-yy-mkU"/>
+                            <constraint firstItem="UeT-be-mMq" firstAttribute="top" secondItem="27j-EH-3OV" secondAttribute="topMargin" id="28w-Qn-kGv"/>
+                            <constraint firstItem="lhg-Bh-X2g" firstAttribute="top" secondItem="UeT-be-mMq" secondAttribute="bottom" id="82u-fe-lzT"/>
+                            <constraint firstItem="UeT-be-mMq" firstAttribute="centerX" secondItem="27j-EH-3OV" secondAttribute="centerX" id="849-e4-cb5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UeT-be-mMq" secondAttribute="trailing" constant="-20" id="DZg-GE-ltn"/>
+                            <constraint firstItem="UeT-be-mMq" firstAttribute="leading" secondItem="27j-EH-3OV" secondAttribute="leadingMargin" constant="-20" id="r0X-lX-7sx"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -306,7 +295,6 @@
                     <connections>
                         <outlet property="naviBar" destination="jM5-TK-sLJ" id="g4m-3i-Xzh"/>
                         <outlet property="tableView" destination="UeT-be-mMq" id="sUc-Gy-Fnm"/>
-                        <outlet property="uptoolbar" destination="urD-j7-5eh" id="IAp-Qg-k5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztd-hr-KvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
