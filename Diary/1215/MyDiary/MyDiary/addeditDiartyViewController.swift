@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addeditDiartyViewController: UIViewController {
+class addeditDiartyViewController: UIViewController,UITe {
     
     var actionType = 0; // 0> add , i > edit
     var DiartID = 0;
@@ -54,6 +54,10 @@ class addeditDiartyViewController: UIViewController {
     override func viewDidLoad() {
         setBackgroundTheme("");
      
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+
+        
      //set title textField underline only, no border
         let bottomLine = CALayer()
         bottomLine.frame = CGRectMake(0.0, titleTextFiled.frame.height - 3, titleTextFiled.frame.width, 3.0)
@@ -64,6 +68,45 @@ class addeditDiartyViewController: UIViewController {
       
     }
     
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+        print("!!!----\(keyboardSize.height) : \(self.view.frame.origin.y)---!!!");
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y += keyboardSize.height
+        }
+          print("hide!!!----\(keyboardSize.height) : \(self.view.frame.origin.y)---!!!");
+    }
+    
+//    func keyboardWillShow(notification: NSNotification) {
+//        
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//            if view.frame.origin.y == 0{
+//                self.view.frame.origin.y -= keyboardSize.height
+//            }
+//            else {
+//                
+//            }
+//        }
+//        
+//    }
+//    
+//    func keyboardWillHide(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//            if view.frame.origin.y != 0 {
+//                self.view.frame.origin.y += keyboardSize.height
+//            }
+//            else {
+//                
+//            }
+//        }
+//    }
     
     
     //在鍵盤執行的時候, 按一下空白處就是收回鍵盤
