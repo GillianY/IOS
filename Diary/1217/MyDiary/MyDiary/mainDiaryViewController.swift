@@ -30,11 +30,11 @@ class mainDiaryViewController: UIViewController, UITableViewDataSource,UITableVi
         
        // uptoolbar.layer.borderWidth = 1;
        // uptoolbar.layer.borderColor =  UIColor.clearColor().CGColor;
-        
         // navigationController?.navigationBar.frame.origin.y = 10
+        
         setBackgroundTheme("");
         
-        diarylist =  [DiaryItem]();
+        
         getDiarylist();
         
         self.tableView.delegate = self as UITableViewDelegate;
@@ -49,9 +49,12 @@ class mainDiaryViewController: UIViewController, UITableViewDataSource,UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier("diaryCell", forIndexPath: indexPath) as! mainDiaryCell
-        cell.backgroundColor = UIColor.clearColor();
-       // cell.contentView.backgroundColor = UIColor.clearColor();
+            cell.backgroundColor = UIColor.clearColor();
+            // cell.contentView.backgroundColor = UIColor.clearColor();
             // Configure the cell...
+        
+        
+        
             switch (indexPath.section) {
             case 0:
                 cell.daylabel?.text = countriesinEurope[indexPath.row]
@@ -97,6 +100,13 @@ class mainDiaryViewController: UIViewController, UITableViewDataSource,UITableVi
     
     //get DiaryDatas
     func getDiarylist()->(){
+        
+        diarylist =  [DiaryItem]();
+        
+        
+        
+        
+        
         var adiaryitem = DiaryItem();
         diarylist?.append(adiaryitem);
         
@@ -107,8 +117,8 @@ class mainDiaryViewController: UIViewController, UITableViewDataSource,UITableVi
        var adiaryitem3 = DiaryItem();
         adiaryitem3.date = DiaryItem.stringToDate("Sun, 30 Oct 2016 01:05");
         diarylist?.append(adiaryitem3);
-       //  print("count \(diarylist!.count)------");
-        
+       
+        print("count \(diarylist!.count)------");
     }
     
     

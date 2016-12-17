@@ -26,7 +26,7 @@ class DiaryItem {
     init() {
         
         tags = [1,3,4,7];
-        date = DiaryItem.stringToDate("Sat, 22 Oct 2016 07:45");
+        date = DiaryItem.stringToDate("2016-11-12 18:03");
         title = "hihi 天氣真好 ";
         contents = "asdfjlkasdjasdf \n asgasdfaas"; // ?? 換行符號的處理 injection
         photos = UIImagePNGRepresentation( UIImage(named: "snowman")!);
@@ -41,22 +41,41 @@ class DiaryItem {
         //        const uint8_t* bytes = [data bytes];
     }
     
+    static func UIStringToDate(datestr: String)-> NSDate{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "d MMM yyyy HH:mm" ;
+        dateFormatter.locale = NSLocale(localeIdentifier: "zh_TW")
+        dateFormatter;
+        print("UIStringToDate:\(datestr)");
+        let dateObj :NSDate = dateFormatter.dateFromString(datestr)!
+        
+        return dateObj
+    
+    }
     
       static func stringToDate(datestr: String)-> NSDate{
-        //let dateString = "Sat, 22 Oct 2016 07:45"
+        //let dateString = "2016-11-12 18:03"
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "EEE, dd MMM yyyy hh:mm "
-        dateFormatter.locale = NSLocale(localeIdentifier: "en-US")
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" ;  // "EEE, dd MMM yyyy hh:mm "
+        dateFormatter.locale = NSLocale(localeIdentifier: "zh_TW")
         dateFormatter;
-        print("\(datestr)");
+        print("stringToDate:\(datestr)");
         let dateObj :NSDate = dateFormatter.dateFromString(datestr)!
         
         return dateObj
     }
     
+    static func DatetoCalendar(date :NSDate)-> NSDateComponents{
+
+        let unitFlags: NSCalendarUnit = [.Hour, .Weekday, .Day, .Month, .Year]
+        let components = NSCalendar.currentCalendar().components(unitFlags, fromDate:date)
+        return components;
+    
+    }
+    
     static func dateToString(dateObj: NSDate)-> String{
         let dateFormatter = NSDateFormatter();
-        dateFormatter.dateFormat = "EEE, dd MMM yyyy hh:mm "
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         return dateFormatter.stringFromDate(dateObj);
     }
     
@@ -68,12 +87,12 @@ class DiaryItem {
     }
     static func dategetMonth(dateObj: NSDate)->String{
         let dateFormatter = NSDateFormatter();
-        dateFormatter.dateFormat = "MMM"
+        dateFormatter.dateFormat = "MMMM"
         return dateFormatter.stringFromDate(dateObj);
     }
     static func dategetTime(dateObj: NSDate)->String{
         let dateFormatter = NSDateFormatter();
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "HH:mm"
         return dateFormatter.stringFromDate(dateObj);
     }
     

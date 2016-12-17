@@ -31,7 +31,7 @@ class DiaryDAO { //: NSObject
         let db = FMDatabase(path: DiaryDAO.dbPath)
         
         db.open()
-        let result = db.executeQuery("Select * from  Diary order by did desc", withArgumentsInArray: [])
+        let result = db.executeQuery("Select * from  Diary order by date desc", withArgumentsInArray: [])
         var counter = 0;
         while result.next(){
             counter += 1;
@@ -53,6 +53,8 @@ class DiaryDAO { //: NSObject
         
         return diarys;
     }
+  
+    
   
     
     static func getDiaryByDid(did : Int)-> DiaryItem{
@@ -118,7 +120,7 @@ class DiaryDAO { //: NSObject
         db.open();
         db.executeUpdate("INSERT INTO Diary (date,title,weather,mood,Contents ) VALUES (:date,:title,:weather,:mood,:contents) ", withParameterDictionary: dict)
         print("insert data!");
-         db.executeUpdate("INSERT INTO Diary (date,title,weather,mood,Contents ) VALUES (:date,'2',1,1,'4') ", withParameterDictionary: dict)
+       //  db.executeUpdate("INSERT INTO Diary (date,title,weather,mood,Contents ) VALUES (:date,'2',1,1,'4') ", withParameterDictionary: dict)
         //print("insert data!");
         db.close()
         

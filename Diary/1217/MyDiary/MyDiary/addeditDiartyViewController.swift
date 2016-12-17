@@ -100,14 +100,12 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate {
         
         if(setDate)
         {
-            let composedDate = "\(weekLabel.text!), \(dayLabel.text!) \(monthLabel.text!) \(yearLabel.text!) \(timeLabel.text!)";
+            let composedDate = "\(dayLabel.text!) \(monthLabel.text!) \(yearLabel.text!) \(timeLabel.text!)";
             
-            currentdiary?.date = DiaryItem.stringToDate(composedDate) ;
-           // print("date: \(currentdiary?.date)");
+            currentdiary?.date = DiaryItem.UIStringToDate(composedDate) ;
         }
         currentdiary?.title = titleTextFiled.text! ; // what if empty?
         currentdiary?.contents = contentsTextView.text;
-      //  print("text:\(contentsTextView.text)");
         currentdiary?.mood = moodBtn.tag;
         currentdiary?.weather = weatherBtn.tag;
     }

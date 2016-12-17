@@ -217,13 +217,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.9592173504" blue="0.77059033210000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="vkk-Xm-k50"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="6"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -243,7 +243,6 @@
                                                 <constraint firstItem="rpp-6U-bKp" firstAttribute="leading" secondItem="zfm-vh-Gcl" secondAttribute="leadingMargin" id="mMm-2J-gWG"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.6487312543" green="0.87947542599999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="daylabel" destination="4PY-Et-fiZ" id="5I5-1Y-ojD"/>
@@ -280,7 +279,7 @@
                                 <segment title="Diary"/>
                             </segments>
                             <connections>
-                                <segue destination="Rfd-vF-Z39" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="partialCurl" id="YwD-rM-beP"/>
+                                <segue destination="Rfd-vF-Z39" kind="presentation" identifier="addDiary" modalPresentationStyle="pageSheet" modalTransitionStyle="partialCurl" id="YwD-rM-beP"/>
                             </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Vxu-al-xwS"/>
