@@ -14,12 +14,14 @@ class DiaryDAO { //: NSObject
         let fileMgr = NSFileManager.defaultManager();
         if !fileMgr.fileExistsAtPath(target){
             let source = NSBundle.mainBundle().pathForResource("MyDiary", ofType: "sqlite")
-            try? fileMgr.copyItemAtPath(source!, toPath: target)
-            //            do{
-            //                 try fileMgr.copyItemAtPath(source!, toPath: target)
-            //            }catch  { // seldom
-            //            } //很少用這個 因為通常會先確定 , 除非網路下來的東西 ,但也會先確定是否存在連線
+            //try? fileMgr.copyItemAtPath(source!, toPath: target)
+                        do{
+                             try fileMgr.copyItemAtPath(source!, toPath: target)
+                        }catch  { // seldom
+                            print("!!!!error!!!!!");
+                        } //很少用這個 因為通常會先確定 , 除非網路下來的東西 ,但也會先確定是否存在連線
         }
+        print("\(target)");
         return target
     }
     
@@ -29,10 +31,12 @@ class DiaryDAO { //: NSObject
         let db = FMDatabase(path: DiaryDAO.dbPath)
         
         db.open()
-        let result = db.executeQuery("Select * from  Contacts order by sid desc", withArgumentsInArray: [])
+        let result = db.executeQuery("Select * from  Diary order by did desc", withArgumentsInArray: [])
+        var counter = 0;
         while result.next(){
+            counter += 1;
             let data = DiaryItem();
-            data.did = Int(result.intForColumn("sid"))
+            data.did = Int(result.intForColumn("did"))
             data.title = result.stringForColumn("title")
             data.contents = result.stringForColumn("Contents")
             data.date = DiaryItem.stringToDate(result.stringForColumn("date"))
@@ -42,7 +46,9 @@ class DiaryDAO { //: NSObject
            // data.photo = result.dataForColumn("photo")
             diarys.append(data);
             
+            
         }
+        print("count:\(counter)");
         db.close();
         
         return diarys;
@@ -58,7 +64,7 @@ class DiaryDAO { //: NSObject
             data.did = Int(result.intForColumn("sid"))
             data.title = result.stringForColumn("title")
             data.contents = result.stringForColumn("Contents")
-            data.date = DiaryItem.stringToDate(result.stringForColumn("date"))
+           // data.date = DiaryItem.dateToString(result.stringForColumn("date"));
             data.mood = Int(result.intForColumn("mood"))
             data.weather = Int(result.intForColumn("weather"))
 
@@ -102,15 +108,18 @@ class DiaryDAO { //: NSObject
         var dict = [String: AnyObject]();  // [NSDictionary]();
      // dict["did"] = data.did
         dict["title"] = data.title
-        dict["contents"] = data.contents
-        dict["date"] = data.date
+        dict["contents"] = data.contents!
+        dict["date"] = DiaryItem.dateToString(data.date!)
         dict["weather"] = data.weather
         dict["mood"] = data.mood
+        print("insert :\(dict["date"]),\(dict["title"]),\(  dict["weather"]),\(dict["mood"]),\(dict["contents"])");
         
         let db = FMDatabase(path : DiaryDAO.dbPath)
         db.open();
-        db.executeUpdate("INSERT INTO Diary (date,title,weather,mood,contents ) VALUES (:date,:title,:weather,:mood,:contents) ", withParameterDictionary: dict)
+        db.executeUpdate("INSERT INTO Diary (date,title,weather,mood,Contents ) VALUES (:date,:title,:weather,:mood,:contents) ", withParameterDictionary: dict)
         print("insert data!");
+         db.executeUpdate("INSERT INTO Diary (date,title,weather,mood,Contents ) VALUES (:date,'2',1,1,'4') ", withParameterDictionary: dict)
+        //print("insert data!");
         db.close()
         
     }
@@ -120,7 +129,7 @@ class DiaryDAO { //: NSObject
         dict["did"] = data.did
         dict["title"] = data.title
         dict["contents"] = data.contents
-        dict["date"] = data.date
+        dict["date"] = DiaryItem.dateToString(data.date!)
         dict["weather"] = data.weather
         dict["mood"] = data.mood
         

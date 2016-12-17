@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7031D1D1E04FDFD005D3061 /* MyDiary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C7031D1C1E04FDFD005D3061 /* MyDiary.sqlite */; };
 		C76169EA1DF965B80079E721 /* mainDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76169E91DF965B80079E721 /* mainDiaryViewController.swift */; };
 		C76169EC1DF967720079E721 /* DiartyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76169EB1DF967720079E721 /* DiartyItem.swift */; };
 		C76169EE1DF96C7C0079E721 /* mainDiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76169ED1DF96C7C0079E721 /* mainDiaryCell.swift */; };
-		C77A8B781E026D0400A55326 /* MyDiary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C77A8B771E026D0400A55326 /* MyDiary.sqlite */; };
 		C77A8B7A1E02778800A55326 /* n01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C77A8B791E02778800A55326 /* n01.jpg */; };
 		C77A8B7C1E0277A100A55326 /* n02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C77A8B7B1E0277A100A55326 /* n02.jpg */; };
 		C77A8B7E1E0277B500A55326 /* n03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C77A8B7D1E0277B500A55326 /* n03.jpg */; };
@@ -44,10 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7031D1C1E04FDFD005D3061 /* MyDiary.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyDiary.sqlite; sourceTree = "<group>"; };
 		C76169E91DF965B80079E721 /* mainDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainDiaryViewController.swift; sourceTree = "<group>"; };
 		C76169EB1DF967720079E721 /* DiartyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiartyItem.swift; sourceTree = "<group>"; };
 		C76169ED1DF96C7C0079E721 /* mainDiaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainDiaryCell.swift; sourceTree = "<group>"; };
-		C77A8B771E026D0400A55326 /* MyDiary.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyDiary.sqlite; sourceTree = "<group>"; };
 		C77A8B791E02778800A55326 /* n01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = n01.jpg; sourceTree = "<group>"; };
 		C77A8B7B1E0277A100A55326 /* n02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = n02.jpg; sourceTree = "<group>"; };
 		C77A8B7D1E0277B500A55326 /* n03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = n03.jpg; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		C7AA20231E0169EA00296729 /* db */ = {
 			isa = PBXGroup;
 			children = (
-				C77A8B771E026D0400A55326 /* MyDiary.sqlite */,
+				C7031D1C1E04FDFD005D3061 /* MyDiary.sqlite */,
 			);
 			name = db;
 			sourceTree = "<group>";
@@ -266,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77A8B841E02AD0D00A55326 /* sunsnowflakes24.png in Resources */,
+				C7031D1D1E04FDFD005D3061 /* MyDiary.sqlite in Resources */,
 				C7EE67581DF813F6004CB50F /* 1480496963_bird.png in Resources */,
 				C77A8B7E1E0277B500A55326 /* n03.jpg in Resources */,
 				C7EE675F1DF81400004CB50F /* sky.jpg in Resources */,
@@ -284,7 +285,6 @@
 				C7EE67591DF813F6004CB50F /* 1480496985_bells.png in Resources */,
 				C7EE675C1DF813F6004CB50F /* 1480497010_cane.png in Resources */,
 				C7EE67431DF811E3004CB50F /* Main.storyboard in Resources */,
-				C77A8B781E026D0400A55326 /* MyDiary.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

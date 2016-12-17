@@ -39,7 +39,8 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate {
         if(actionType == 1) //add
         {
           saveCurrentDiaryfromUI(withDate: true);
-            DiaryDAO.insert(currentdiary!);
+          DiaryDAO.insert(currentdiary!);
+          DiaryDAO.getDiarys();
         }else //update
         {
             saveCurrentDiaryfromUI(withDate: true);
@@ -48,7 +49,7 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate {
                 DiaryDAO.update(currentdiary!);
             }else
             {
-                 DiaryDAO.insert(currentdiary!);
+                DiaryDAO.insert(currentdiary!);
             }
         }
     }
@@ -102,10 +103,11 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate {
             let composedDate = "\(weekLabel.text!), \(dayLabel.text!) \(monthLabel.text!) \(yearLabel.text!) \(timeLabel.text!)";
             
             currentdiary?.date = DiaryItem.stringToDate(composedDate) ;
+           // print("date: \(currentdiary?.date)");
         }
         currentdiary?.title = titleTextFiled.text! ; // what if empty?
         currentdiary?.contents = contentsTextView.text;
-        print("text:\(contentsTextView.text)");
+      //  print("text:\(contentsTextView.text)");
         currentdiary?.mood = moodBtn.tag;
         currentdiary?.weather = weatherBtn.tag;
     }
