@@ -30,6 +30,7 @@ class showDiaryViewController: UIViewController,UITextViewDelegate {
     
     
     override func viewDidLoad() {
+        view.backgroundColor = UIColor.clearColor() ;
         dayLabel.text = DiaryItem.dategetDay(currentDiary.date!) ;
         
         print("showDiary: \(currentDiary.title)");

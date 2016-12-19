@@ -369,7 +369,7 @@
                         <viewControllerLayoutGuide type="top" id="QXB-41-A87"/>
                         <viewControllerLayoutGuide type="bottom" id="C39-ZD-9ME"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" id="428-1W-Jzr">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="428-1W-Jzr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -499,7 +499,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.87254225740000002" blue="0.86085089420000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yEl-Ba-6db" firstAttribute="leading" secondItem="428-1W-Jzr" secondAttribute="leadingMargin" constant="20" id="7nP-T1-Rw3"/>
                             <constraint firstItem="yEl-Ba-6db" firstAttribute="centerX" secondItem="428-1W-Jzr" secondAttribute="centerX" constant="20" id="OeO-en-lfp"/>
