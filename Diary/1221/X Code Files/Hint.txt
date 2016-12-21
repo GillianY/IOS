@@ -1,0 +1,24 @@
+
+
+
+Challenge 1: 
+
+Add multiple textfield in view controller & move them only if they get covered by textfield.
+
+Hint: 
+
+add scroll view in background & add every single constraint. Move scroll bar when text field appears
+
+
+
+
+
+
+
+Challenge 2: 
+
+Change orientation & get same result as challenge 1
+
+Hint: 
+
+Make sure constrains let you maintain position when you change orientation
