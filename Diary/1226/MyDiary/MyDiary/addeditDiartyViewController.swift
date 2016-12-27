@@ -35,11 +35,21 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
     @IBOutlet weak var contentsTextView: UITextView!
     
     @IBOutlet weak var weatherBtn: UIButton!
-  //  @IBOutlet weak var moodBtn: UIButton!
+  
     
     @IBOutlet weak var tagsBtn: UIButton!
     
     @IBAction func weatherSelect(sender: AnyObject) {
+        let pop = self.storyboard?.instantiateViewControllerWithIdentifier("selectedWeatherVC") as! selectWeather; // ViewController
+        pop.modalPresentationStyle = .Popover
+        pop.popoverPresentationController?.delegate = self
+        pop.popoverPresentationController?.sourceView = weatherBtn ; // btn
+        pop.popoverPresentationController?.sourceRect = weatherBtn.bounds; //CGRectMake(100,100,0,0)
+        pop.preferredContentSize = CGSizeMake(300, 200)
+        pop.popoverPresentationController?.permittedArrowDirections =  .Up ;//.Down
+        self.presentViewController(pop, animated: true, completion: nil)
+        
+     // weatherBtn
     }
     @IBOutlet weak var moodSelect: UIButton!
     
@@ -86,8 +96,6 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
         }
         
         self.dismissViewControllerAnimated(true, completion: nil)
-
-        
     }
     
     
