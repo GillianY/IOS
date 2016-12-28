@@ -256,8 +256,8 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
         contextCompleteTollbar?.barStyle = UIBarStyle.Black;
         
         
-     //   let doneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "resignKeyboard");
-        let doneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(self.resignKeyboard))
+        let doneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "resignKeyboard");
+     //   let doneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(self.resignKeyboard))
 
         
         let emptyItem1 : UIBarButtonItem =  UIBarButtonItem.init(); //(barButtonSystemItem: nil, target: nil, action: nil);
@@ -268,7 +268,7 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
         contextCompleteTollbar?.setItems(btnArray, animated: true)
         
         
-      //    let txFielddoneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: tfDelegate, action: "resignKeyboardtxfiled")
+     //     let txFielddoneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: tfDelegate, action: "resignKeyboardtxfiled")
         let txFielddoneButton : UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: tfDelegate, action: #selector(tfDelegate!.resignKeyboardtxfiled(_:)))
         
         
@@ -286,7 +286,7 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(addeditDiartyViewController.keyboardDidShow(_:)), name: UIKeyboardDidShowNotification, object: nil);
         
-          //NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidHidden", name: UIKeyboardDidHideNotification, object: nil);
+       //   NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidHidden", name: UIKeyboardDidHideNotification, object: nil);
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(addeditDiartyViewController.keyboardDidHidden(_:)), name: UIKeyboardDidHideNotification, object: nil);
     }

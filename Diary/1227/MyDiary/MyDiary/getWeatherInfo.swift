@@ -10,10 +10,16 @@ import UIKit
 
 class getWeatherInfo: NSObject,NSURLSessionDelegate, NSURLSessionDownloadDelegate {
     
-    var weatherID = 8;
+    var weatherID = 1;
     var JsondataArray = [String:String]();
     
-     func getJsonFromSession( classitself:AnyObject){
+    override init() {
+        super.init();
+        print("init getWeatherInfo");
+        getJsonFromSession();
+    }
+    
+    func getJsonFromSession(){// classitself:AnyObject){
         //台北市立動物園公開資料網址
         let url = NSURL(string: "https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%202306179%20and%20u%3D%22c%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
         //"http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&amp;rid=a3e2b221-75e0-45c1-8f97-75acbd43d613"
@@ -48,6 +54,17 @@ class getWeatherInfo: NSObject,NSURLSessionDelegate, NSURLSessionDownloadDelegat
             print("Error!")
         }
         print("hello");
+    }
+    
+    func getWeatherImage(){
+        
+       let weatherCode = JsondataArray["code"]
+        
+       // if(weatherCode >= 0 & weatherCode< )
+        
+        
+        
+    
     }
     
     static var weatherIconName = [
