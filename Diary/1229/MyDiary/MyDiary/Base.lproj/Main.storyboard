@@ -271,33 +271,22 @@
                                                         <constraint firstAttribute="height" constant="2" id="ZEO-Ls-2Sf"/>
                                                     </constraints>
                                                 </view>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aFZ-QW-baC">
-                                                    <rect key="frame" x="438" y="10" width="118" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JQx-C3-LOw">
+                                                    <rect key="frame" x="438" y="15" width="118" height="31"/>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-K9-VYR">
-                                                    <rect key="frame" x="423" y="13" width="118" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-gm-fzx">
+                                                    <rect key="frame" x="451" y="16" width="118" height="31"/>
                                                 </slider>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bp-tU-IlW">
-                                                    <rect key="frame" x="458" y="6" width="51" height="31"/>
-                                                </switch>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VCL-yh-cjB">
-                                                    <rect key="frame" x="431" y="24" width="150" height="2"/>
-                                                </progressView>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="szf-it-5rQ">
-                                                    <rect key="frame" x="423" y="0.0" width="118" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kfe-GN-KUi">
+                                                    <rect key="frame" x="423" y="26" width="118" height="31"/>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2xW-p4-YVV">
-                                                    <rect key="frame" x="423" y="8" width="118" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-kt-FMM">
+                                                    <rect key="frame" x="451" y="0.0" width="118" height="31"/>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vPw-kF-qXx">
-                                                    <rect key="frame" x="423" y="-4" width="118" height="31"/>
-                                                </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="db1-o1-5ME">
-                                                    <rect key="frame" x="429" y="8" width="118" height="31"/>
-                                                </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y1S-92-0mg">
-                                                    <rect key="frame" x="429" y="10" width="118" height="31"/>
-                                                </slider>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-7Y-yX1">
+                                                    <rect key="frame" x="487" y="21" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ddx-Fj-ezL" firstAttribute="top" secondItem="hwg-6L-L03" secondAttribute="bottom" constant="12" id="9qA-0i-89V"/>
@@ -1336,6 +1325,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-If-3KV">
+                                <rect key="frame" x="280" y="290" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28627450980000002" green="0.4941176471" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcc-4R-Bw0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <constraints>
@@ -1378,12 +1373,6 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X50-wF-6FC">
                                         <rect key="frame" x="255" y="238" width="90" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.28627450980000002" green="0.4941176471" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-If-3KV">
-                                        <rect key="frame" x="557" y="347" width="39" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.28627450980000002" green="0.4941176471" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1451,8 +1440,6 @@
                                     <constraint firstItem="QTK-3W-E3C" firstAttribute="centerY" secondItem="psV-uh-bv5" secondAttribute="centerY" id="I0u-lD-off"/>
                                     <constraint firstItem="kiM-CF-6VT" firstAttribute="centerX" secondItem="psV-uh-bv5" secondAttribute="centerX" id="Vzg-wg-uYc"/>
                                     <constraint firstItem="QTK-3W-E3C" firstAttribute="centerX" secondItem="psV-uh-bv5" secondAttribute="centerX" id="dJ0-Bx-J1t"/>
-                                    <constraint firstAttribute="trailing" secondItem="rUf-If-3KV" secondAttribute="trailing" constant="4" id="dcq-GV-Bd6"/>
-                                    <constraint firstAttribute="bottom" secondItem="rUf-If-3KV" secondAttribute="bottom" constant="4" id="o0g-Fw-OHU"/>
                                     <constraint firstItem="X50-wF-6FC" firstAttribute="top" secondItem="QTK-3W-E3C" secondAttribute="bottom" constant="-8" id="oI2-Zo-W2P"/>
                                     <constraint firstItem="X50-wF-6FC" firstAttribute="centerX" secondItem="psV-uh-bv5" secondAttribute="centerX" id="tk2-nE-Sev"/>
                                     <constraint firstAttribute="bottom" secondItem="Ybl-ex-M41" secondAttribute="bottom" constant="40" id="v82-Nb-lvp"/>
