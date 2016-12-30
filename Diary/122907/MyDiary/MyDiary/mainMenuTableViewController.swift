@@ -13,7 +13,8 @@ class mainMenuTableViewController: UIViewController,UITableViewDelegate,UITableV
     @IBOutlet weak var tableView: UITableView!
  //   @IBOutlet weak var itemtableView: UITableView!
     
-     var funcs = ["電話號碼","日       記","近期目標","待辦事項"]
+     //var funcs = ["電話號碼","日       記","近期目標","待辦事項"]
+    var funcs = ["日       記","近期目標","待辦事項"]
     var photoName = ["Phone-50(2).png","Ball Point Pen.png","List.png","ToDo List.png"]
     
     override func viewDidLoad() {
@@ -50,7 +51,7 @@ class mainMenuTableViewController: UIViewController,UITableViewDelegate,UITableV
     }
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (funcs.count - 1);
+        return 2; //(funcs.count - 1);
     }
     
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -64,12 +65,12 @@ class mainMenuTableViewController: UIViewController,UITableViewDelegate,UITableV
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.row) {
-        case 0: self.performSegueWithIdentifier("showList", sender: self)
-            break;
-        case 1: self.performSegueWithIdentifier("showDiary", sender: self)
+      //  case 0: self.performSegueWithIdentifier("showList", sender: self)
+          //  break;
+        case 0: self.performSegueWithIdentifier("showDiary", sender: self)
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        break;
-        case 2:
+       // break;
+        case 1:
             
             let todolistVC = storyboard?.instantiateViewControllerWithIdentifier("ToDoListVC") as! todoListViewController ;
             todolistVC.MemoID = 1  ;

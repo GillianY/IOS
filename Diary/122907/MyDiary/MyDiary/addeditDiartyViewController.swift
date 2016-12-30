@@ -109,7 +109,6 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
         super.viewDidLoad();
        // photoID = DiaryDAO.getNewPhotoID();
         
-        
         showKeyBoard = true;
         setBackgroundTheme("");
        
@@ -150,7 +149,6 @@ class addeditDiartyViewController: UIViewController ,UITextViewDelegate, UIPopov
             updateUIfromCurrentDiary(WithDate: true);
         }
      
-        
         //set title textField underline only, no border
         //        let bottomLine = CALayer()
         //        bottomLine.frame = CGRectMake(0.0, titleTextFiled.frame.height - 3, titleTextFiled.frame.width, 3.0)
